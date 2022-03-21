@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+  </head>
+  <body>
+    <div id="clock" onload="currentTime();"></div>
+
+    <script>
+      const currentTime = () => {
+        let date = new Date();
+        let dd = date.getDate();
+        let mm = date.getMonth()+1;
+        let yyyy = date.getFullYear();
+        let h = date.getHours();
+        let m = date.getMinutes();
+        let s = date.getSeconds();
+        let ms = date.getMilliseconds();
+
+        dd = dd < 10 ? `0${dd}` : dd;
+        mm = mm < 10 ? `0${mm}` : mm;
+        yyyy = yyyy < 10 ? `0${yyyy}` : yyyy;
+        h = h < 10 ? `0${h}` : h;
+        m = m < 10 ? `0${m}` : m;
+        s = s < 10 ? `0${s}` : s;
+
+        let timeString = `${yyyy}/${mm}/${dd} ${h}:${m}:${s}:${ms}`;
+        document.getElementById("clock").innerText = timeString;
+        var t = setTimeout(() => {
+          currentTime();
+        }, 1000);
+        // clearTimeout(t);
+      };
+      currentTime();
+    </script>
+  </body>
+</html>

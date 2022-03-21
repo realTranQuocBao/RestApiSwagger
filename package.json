@@ -1,0 +1,36 @@
+{
+  "name": "restapiswagger",
+  "version": "1.0.0",
+  "description": "Use MongoDB and Swagger UI to create a rest api with sample database on Mongo Atlas (mflix). In tutorial use db of Movie Catchphrase.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realTranQuocBao/RestApiSwagger.git"
+  },
+  "keywords": [
+    "mongodb",
+    "swagger ui",
+    "nodejs",
+    "quocbaoit",
+    "baocutevl"
+  ],
+  "author": "Quoc Bao IT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/realTranQuocBao/RestApiSwagger/issues"
+  },
+  "homepage": "https://github.com/realTranQuocBao/RestApiSwagger#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.7"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
