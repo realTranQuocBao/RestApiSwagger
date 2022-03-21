@@ -8,7 +8,17 @@ let {
   removeCatchphrase,
 } = require("./../controllers/catchphraseController");
 
+/**
+ * @swagger
+ * /catchphrases:
+ *  get:
+ *    description: All catchphrases
+ *    responses:
+ *      200:
+ *        description: return all the catchphrases
+ */
 router.get("/", async (req, res) => {
+  // console.log("getAllCatchphrases", getAllCatchphrases("Doraemon",1,10));
   let response = await getAllCatchphrases(
     req.query.s,
     req.query.page,
