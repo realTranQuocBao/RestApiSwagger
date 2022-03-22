@@ -13,7 +13,7 @@ async function getAllCatchphrases(search, reqPage, reqLimit) {
     };
   }
 
-  let total = Catchphrase.countDocuments(options);
+  let total = await Catchphrase.countDocuments(options);
   let page = parseInt(reqPage) || 1;
   let limit = parseInt(reqLimit) || parseInt(await total);
   let last_page = Math.ceil(parseInt(await total) / limit);

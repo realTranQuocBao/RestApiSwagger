@@ -5,7 +5,7 @@ const catchphraseSchema = new Schema({
   movieName: {
     type: String,
   },
-  catchpharese: {
+  catchphrase: {
     type: String,
   },
   movieContext: {
@@ -13,6 +13,6 @@ const catchphraseSchema = new Schema({
   },
 });
 
-const Catchpharese = mongoose.model("Catchpharese", catchphraseSchema);
+const Catchphrase = mongoose.model("catchphrase", catchphraseSchema);
 
-module.exports = Catchpharese;
+module.exports = Catchphrase;

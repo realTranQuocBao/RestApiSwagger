@@ -5,7 +5,7 @@ const swaggerJsdoc = require("swagger-jsdoc");
 const connectDb = require("./config/db");
 const { catchphrases } = require("./routes/index");
 const swaggerUi = require("swagger-ui-express");
-const cors = require('cors');
+const cors = require("cors");
 
 const app = express();
 connectDb();
@@ -23,10 +23,13 @@ app.use("/catchphrases", catchphrases);
 
 const swaggerOptions = {
   swaggerDefinition: {
+    openapi: "3.0.0",
     info: {
+      version: "1.0.0",
       title: "Catchphrases REST API",
       description:
         "A REST API built with Express and MongoDB. This API provides movie catchphrases and the context of the catchphrase in the movie.",
+      license: "MIT",
     },
   },
   apis: ["./routes/catchphrases.js"],
